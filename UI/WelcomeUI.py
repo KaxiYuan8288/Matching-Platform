@@ -1,4 +1,6 @@
 from UI.BaseUI import BaseUI
+from UI.LoginUI import LoginUI
+from UI.RegisterUI import RegisterUI
 import UI.UI_parameters
 import tkinter as tk
 
@@ -16,6 +18,10 @@ class WelcomeUI(BaseUI):
 
     def login_button_click(self):
         self.clear_widgets()
+        LoginUI(self.root)
+
 
     def register_button_click(self):
         self.clear_widgets()
+        RegisterUI(self.root)
+

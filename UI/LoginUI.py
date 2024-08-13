@@ -1,25 +1,11 @@
-import BaseUI
-
+from UI.BaseUI import BaseUI
 import tkinter as tk
 
 # Define colors
 BLUE = "#87CEEB"
-
-class BaseUI:
-    def __init__(self):
-        self.root = tk.Tk()
-        # Set size, title, background color
-        self.root.geometry("350x700")
-        self.root.title("Matching APP")
-        self.root.configure(bg=BLUE)
-
-        # Start the Tkinter main loop
-        self.root.mainloop()
-
-
 class LoginUI(BaseUI):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, root):
+        super().__init__(root)
 
         # Add title label
         self.title_label = tk.Label(self.root, text="Login", font=("Helvetica", 24), bg=BLUE, fg="white")
@@ -38,11 +24,6 @@ class LoginUI(BaseUI):
 
         self.password_entry = tk.Entry(self.root, show='*')
         self.password_entry.pack(pady=(0, 20))
-
-
-# Create an instance of LoginUI to show the window
-if __name__ == "__main__":
-    app = LoginUI()
 
 
 
