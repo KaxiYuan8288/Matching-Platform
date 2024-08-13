@@ -1,6 +1,4 @@
 from UI.BaseUI import BaseUI
-from UI.MessageUI import MessageUI
-from UI.HomePageUI import HomePageUI
 import tkinter as tk
 
 # Define colors
@@ -45,7 +43,7 @@ class LoginUI(BaseUI):
 
         result = login(input_user_id, input_password)
         if result == 0:
-            HomePageUI(self.root)
+            HomePageUI(self.root, input_user_id)
         elif result == 1:
             message = "User name does not exist, try again!"
             MessageUI(self.root, message)

@@ -1,5 +1,4 @@
 from UI.BaseUI import BaseUI
-from UI.MessageUI import MessageUI
 import tkinter as tk
 from tkinter import ttk
 
