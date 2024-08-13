@@ -1,20 +1,16 @@
 import tkinter as tk
+import UI.UI_parameters
 
-TITLE_FONT_SIZE = 40
-FONT = "Arial"
-TEXT_FONT_SIZE = 15
-GREY =
-BLACK =
-PINK =
-GREEN =
-BLUE =
 
 class BaseUI:
 
-    def __init__(self):
-        self.root = tk.Tk()
+    def __init__(self, root):
+        self.root = root
         #Set size, title, background colour.
         self.root.geometry("350x700")
         self.root.title("Matching APP")
-        self.root.configure(bg = BLUE)
-        self.root.mainloop()
+        self.root.configure(bg=UI.UI_parameters.BLUE)
+
+    def clear_widgets(self):
+        for widget in self.root.winfo_children():
+            widget.destroy()
